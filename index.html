@@ -17,16 +17,27 @@
   <form action="index.html" method="POST"> 
     <fieldset id = "contact">  
       <legend>Contact Information</legend>
+        <div class="container">
         <label for="">Full Name</label>
           <input type="text" id = "full_name" name="full_name" >
+        </div>
+        <div class="container">
         <label for="">Email Address</label>
           <input type="email" id = "email" name= "email">
+        </div>
+        <div class="container">
         <label for="">Phone Number</label>
           <input type="tel" id = "phone" name="phone">
+        </div>
+        <div class="container">
         <label for="">Street Addres</label>
           <input type="text" id = "street" name="street">
+        </div>
+        <div class="container">
         <label for="">City</label>
           <input type="text" id = "city" name="city">
+        </div>
+        <div class="container">
         <label for="">Country</label>
         <select id="country" name="country">
           <option value="Afganistan">Afghanistan</option>
@@ -276,20 +287,42 @@
           <option value="Zambia">Zambia</option>
           <option value="Zimbabwe">Zimbabwe</option>
        </select>
-
-        <label for="">Zip Code</label>
-          <input type="text" id = "zip-code" name="zip-code">
+      </div>
+        <div class="container">
+          <label for="">Zip Code</label>
+            <input type="text" id = "zip-code" name="zip-code">
+        </div>
     </fieldset>
     
-    <fieldset id = "Newsletter">
+    <fieldset id = "newsletter">
       <legend>Newsletter</legend>
-      <label for="comm-type"> Select the newsletter you would like to recieve </label>
-        <input type="checkbox" id= "type" name="comm-type"> <label for="type"> HTML News</label>
-        <input type="checkbox" id= "type" name="comm-type"> <label for="type"> CSS News</label>
-        <input type="checkbox" id= "type" name="comm-type"> <label for="type"> Javascript News</label>
-      <label for="format">Newsletter format</label>
-        <input type="radio" id= "format" name="format"><label for= "format">HTML</label>
-        <input type="radio" id= "format" name="format"><label for= "format">Plain text</label>
+      <div class="container">
+          <h3>Select the newsletters your would like to recieve</h3>
+           <label for="type">
+              <input type="checkbox" id= "type" name="comm-type">
+              HTML News
+           </label>
+           <label for="type">
+            <input type="checkbox" id= "type" name="comm-type">
+            CSS News</label>
+           <label for="type">
+            <input type="checkbox" id= "type" name="comm-type">
+            Javascript News</label>
+        </div>
+        <div class="container">
+          <h3>Newsletter format</h3>
+          <label for= "format"> 
+             <input type="radio" id= "format" name="format"> 
+             HTML
+          </label>
+          <label for= "format">
+            <input type="radio" id= "format" name="format">
+            Plain text
+          </label>
+      </div>
+      <h3>Newsletter request: </h3>
+      <textarea name="text-area" id="request"></textarea>
+      <input type="submit" value="Sign Up">
     </fieldset>
   </form>
   
