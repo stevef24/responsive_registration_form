@@ -1,19 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Uchen', serif;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
   border: 8px;
-  align-items: center;
 }
 
 fieldset {
   border: none;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   background-color: #f4f7f8;
 }
 
@@ -28,7 +26,6 @@ select, input {
   margin: 0;
   outline: 0;
   padding: 15px;
-  width: 100%;
   background-color: #e8eeef;
   color: black ;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -54,31 +51,53 @@ input[type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
-#newspaper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.container {
+body > .container {
   text-align: center;
 }
 
+#contact .container {
+  display: flex;
+  flex-direction: column;
+}
+#newsletter .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#newsletter label {
+  flex-basis: 100%;
+}
+
+.code-review {
+  color: white;
+  background-color: teal;
+  margin: inherit;
+  text-align: center;
+}
+
+#contact > legend , #newsletter > legend {
+  text-align: center;
+}
+
+#contact, #newsletter {
+  border-top: solid 2px black;
+}
+input[type="text"]::placeholder {  
+ text-align: end;
+} 
+input[type="email"]::placeholder {  
+ text-align: end;
+} 
 
 @media (min-width: 768px)  {
-  
-  #contact .container {
+
+  body .contact{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
   }
-
-
+  #contact, #newsletter {
+    max-width: 60%;
+  }
+ 
 }
