@@ -38,6 +38,11 @@ input:focus {
   border-bottom:  2px solid rgb(3, 143, 22);;
 }
 
+input[type="submit"]{
+  background-color: #008080;
+  color: white;
+}
+
 #type #format{
   border: none;
 }
@@ -91,6 +96,9 @@ input[type="email"]::placeholder {
 
 input[id="zip-code"] {
   width: 25%;
+}
+.copywrite {
+  color: #8a97a0;
 }
 
 @media (min-width: 768px)  {
