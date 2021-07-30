@@ -34,8 +34,13 @@ select, input {
   border-radius: 4px;
 }
 
+select, input, textarea {
+  transition: background-color 2s ease;
+}
+
 input:focus,textarea:focus, select:focus{
   border-bottom:  2px solid red;
+  background-color: #a8adad
 }
   
 input[type="submit"]{
@@ -98,7 +103,7 @@ input[type="email"]::placeholder {
 } 
 
 input[id="zip-code"] {
-  width: 25%;
+  width: 50%;
 }
 .copywrite {
   color: #8a97a0;
@@ -106,29 +111,29 @@ input[id="zip-code"] {
 
 @media (min-width: 768px)  {
   
-  #contact, #newsletter {
+  #contact,
+  #newsletter {
     border-top: solid 2px black;
-    width: 38%;
+    max-width: 768px;
+    margin: 0 auto;
   }
-  body .contact{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-
   #contact .container {
-   flex-direction: row;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
   }
   #contact .container label {
     flex-basis: 25%;
   }
-  #contact .container input {
+  #contact .container input,
+  #contact .container select {
     flex-basis: 75%;
+    flex-grow: 1;
+    margin-bottom: 0;
   }
-
-  input[id="zip-code"] {
-    width: 50%;
-   }
+  #zip-code {
+    max-width: 25%;
+  }
  
 }
