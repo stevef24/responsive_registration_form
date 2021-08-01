@@ -89,6 +89,9 @@ body > .container {
   background-color: teal;
   margin: inherit;
   text-align: center;
+  height: 75px;
+  display: flex;
+  justify-content: center;
 }
 
 #contact > legend , #newsletter > legend {
